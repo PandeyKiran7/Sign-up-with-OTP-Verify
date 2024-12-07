@@ -1,0 +1,21 @@
+.home, .verify-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.left-pane {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-pane {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

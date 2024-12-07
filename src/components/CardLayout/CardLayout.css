@@ -1,0 +1,42 @@
+.card-layout {
+    background: linear-gradient(135deg, #4b2ccf, #be74ff);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+/* Middle card is slightly raised */
+.card.middle {
+    position: relative;
+    z-index: 1;
+    transform: translateY(-20px);
+}
+
+/* Bottom-left and bottom-right cards are lower */
+.card.bottom-left,
+.card.bottom-right {
+    transform: translateY(20px);
+}
