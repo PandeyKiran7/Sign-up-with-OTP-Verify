@@ -1,17 +1,12 @@
 import React from 'react';
-import {CardLayout }from '../../components/CardLayout/CardLayout';
-import OTPVerification from '../../components/OTPVerification/OTPVerification';
-import EmailInput from '../EmailInput/EmailInput';
-
+import SignUP from '../SignUp/SignUP';
+import Navbar from "../../components/Navbar/Navbar"
 const Home = () => {
     return (
         <div className="home">
-            <div className="left-pane">
-                <CardLayout />
-            </div>
+            <Navbar/>
             <div className="right-pane">
-                <OTPVerification />
-                <EmailInput/>
+                <SignUP/>
             </div>
         </div>
     );

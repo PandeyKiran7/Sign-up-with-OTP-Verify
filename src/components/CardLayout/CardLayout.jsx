@@ -1,7 +1,7 @@
 import React from 'react';
 import "./CardLayout.css"
-
-export const CardLayout = () => {
+ 
+const CardLayout = () => {
   return (
     <div className='card-layout'>
         <h2>Layout Cards</h2>
@@ -40,4 +40,5 @@ export const CardLayout = () => {
 
         </div>
   )
-}
+};
+export default CardLayout;

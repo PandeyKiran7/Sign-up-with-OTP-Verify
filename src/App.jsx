@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/pages/Home/Home";
-import EmailInput from "./pages/EmailInput/EmailInput";
-import VerifyOTP from "./components/OTPVerification/OTPVerification";
-import NextForm from "./pages/EmployeeForm/EmployeeForm";
+import SignUP from "./pages/SignUp/SignUP";
+import EmployeeForm from "./pages/EmployeeForm/EmployeeForm";
+import VerifyEmail from "./components/VerifyEmail/VerifyEmail";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} /> 
-        <Route path="/email-input" element={<EmailInput />} /> 
-        <Route path = "/verify-otp" element = {<VerifyOTP/>} />
-         <Route path="/next-form" element={<NextForm />} />
+        <Route path="/email-input" element={<SignUP />} /> 
+        <Route path = "/verify-email-with-otp" element = {<VerifyEmail/>} />
+         <Route path="/employee-form" element={<EmployeeForm />} />
       </Routes>
     </Router>
   );

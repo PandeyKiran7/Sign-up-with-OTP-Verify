@@ -1,6 +1,6 @@
 import React from "react";
 
-const NextForm = () => {
+const EmployeeForm = () => {
   return (
     <div>
       <h2>Welcome to the Next Form</h2>
@@ -10,4 +10,4 @@ const NextForm = () => {
   );
 };
 
-export default NextForm;
+export default EmployeeForm;
