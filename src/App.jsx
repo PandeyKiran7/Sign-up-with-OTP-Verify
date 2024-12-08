@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} /> 
-        <Route path="/email-input" element={<SignUP />} /> 
+        <Route path="/sign-up" element={<SignUP />} /> 
         <Route path = "/verify-email-with-otp" element = {<VerifyEmail/>} />
          <Route path="/employee-form" element={<EmployeeForm />} />
       </Routes>

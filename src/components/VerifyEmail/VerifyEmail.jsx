@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+import "./verifyEmail.css";
 
 const VerifyEmail = () => {
   const [otpArray, setOtpArray] = useState(Array(6).fill(""));
-  const [timer, setTimer] = useState(0); 
+  const [timer, setTimer] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
   const { email, otp } = location.state || {};
 
   useEffect(() => {
-    // Start a countdown timer for 1:39 (99 seconds) after component mounts
     if (timer === 0) {
       setTimer(99);
       const countdown = setInterval(() => {
@@ -51,110 +53,68 @@ const VerifyEmail = () => {
 
   const handleResendOtp = () => {
     alert("OTP has been resent to your email.");
-    // Reset timer and resend OTP
     setTimer(99);
   };
 
   if (!email || !otp) {
-    return <p>Error: Email or OTP missing. Please go back and re-enter.</p>;
+    return (
+      <>
+        <Navbar />
+        <p className="error">Error: Email or OTP missing. Please go back and re-enter.</p>
+        <Footer/>
+      </>
+    );
   }
 
   return (
-    <div style={styles.container}>
-      <h2>Verify OTP</h2>
-      <p>Please enter the 6-digit code we just sent to: {email}</p>
-      <form onSubmit={handleVerify} style={styles.form}>
-        <div style={styles.otpContainer}>
-          {otpArray.map((digit, index) => (
-            <input
-              key={index}
-              id={`otp-input-${index}`}
-              type="text"
-              maxLength="1"
-              value={digit}
-              onChange={(e) => handleOtpChange(e, index)}
-              style={styles.otpInput}
-            />
-          ))}
-        </div>
-        <button type="submit" style={styles.button}>
-          Verify OTP
-        </button>
-      </form>
-
-      <div style={styles.resendContainer}>
-        {timer > 0 ? (
-          <p>Wait {Math.floor(timer / 60)}:{timer % 60 < 10 ? `0${timer % 60}` : timer % 60} before requesting a new code.</p>
-        ) : (
-          <button onClick={handleResendOtp} style={styles.resendButton}>
-            Didn't receive a code? Resend Code
+    <>
+    <Navbar/>
+      <div className="verify-email-container">
+        <h2>Verify OTP</h2>
+        <p>Please enter the 6-digit code we just sent to: {email}</p>
+        <form onSubmit={handleVerify} className="verify-email-form">
+          <div className="otp-container">
+            {otpArray.map((digit, index) => (
+              <input
+                key={index}
+                id={`otp-input-${index}`}
+                type="text"
+                maxLength="1"
+                value={digit}
+                onChange={(e) => handleOtpChange(e, index)}
+                className="otp-input"
+              />
+            ))}
+          </div>
+          <button type="submit" className="verify-button">
+            Verify OTP
           </button>
-        )}
-      </div>
+        </form>
 
-      <div style={styles.termsContainer}>
-        <p>
-          By continuing, you're agreeing to Nobody's <a href="/terms">Terms of Service</a>, <a href="/privacy">Privacy Policy</a>, and <a href="/cookies">Cookie Policy</a>.
-        </p>
+        <div className="resend-container">
+          {timer > 0 ? (
+            <p>
+              Wait {Math.floor(timer / 60)}:
+              {timer % 60 < 10 ? `0${timer % 60}` : timer % 60} before requesting a new code.
+            </p>
+          ) : (
+            <button onClick={handleResendOtp} className="resend-button">
+              Didn't receive a code? Resend Code
+            </button>
+          )}
+        </div>
+
+        <div className="terms-container">
+          <p>
+            By continuing, you're agreeing to Nobody's{" "}
+            <a href="/terms">Terms of Service</a>, <a href="/privacy">Privacy Policy</a>, and{" "}
+            <a href="/cookies">Cookie Policy</a>.
+          </p>
+        </div>
       </div>
-    </div>
+      <Footer/>
+    </>
   );
-};
-
-const styles = {
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100vh",
-    backgroundColor: "#f7f7f7",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  otpContainer: {
-    display: "flex",
-    gap: "10px",
-    marginBottom: "1rem",
-  },
-  otpInput: {
-    width: "40px",
-    height: "40px",
-    textAlign: "center",
-    fontSize: "1.2rem",
-    border: "1px solid #ccc",
-    borderRadius: "5px",
-  },
-  button: {
-    padding: "0.5rem 1rem",
-    backgroundColor: "#007bff",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    fontSize: "1rem",
-  },
-  resendContainer: {
-    marginTop: "1rem",
-    textAlign: "center",
-  },
-  resendButton: {
-    backgroundColor: "#28a745",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    padding: "0.5rem 1rem",
-    cursor: "pointer",
-  },
-  termsContainer: {
-    marginTop: "2rem",
-    textAlign: "center",
-    fontSize: "0.9rem",
-    color: "#555",
-  },
 };
 
 export default VerifyEmail;
