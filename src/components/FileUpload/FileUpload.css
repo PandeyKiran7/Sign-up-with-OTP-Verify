@@ -1,0 +1,166 @@
+.Certification-box {
+  width: 798px;
+  height: 262px;
+  gap: 24px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+
+.text label {
+  width: 798px;
+  height: 24px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  font-variation-settings: "slnt" 0;
+  margin: 40px;
+}
+
+.text label span {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.text p {
+  width: 798px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 450;
+  line-height: 20px;
+  text-align: left;
+  color: #636567;
+  padding: 20px;
+}
+
+.file-upload-box {
+  width: 798px;
+  padding: 36px 32px;
+  gap: 20px;
+  border-radius: 11px;
+  border: 1px dotted skyblue;
+  text-align: center;
+  position: relative;
+  margin: 20px;
+}
+
+.file-upload-box p {
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 450;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  font-variation-settings: "slnt" 0;
+  color: grey;
+  padding: 4px;
+}
+
+.file-upload-label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.upload-text {
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 18px;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-skip-ink: false;
+  margin-left: 23%;
+}
+.file-upload-label span {
+  font-family: Inter;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: grey;
+}
+.upload-text:hover {
+  text-decoration: underline;
+}
+
+.upload-icon {
+  font-size: 18px;
+  color: #3e9be0;
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 32px;
+  padding: 10px;
+  gap: 8px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-size {
+  font-size: 10px;
+  color: #888;
+  margin-left: 37%;
+  margin-bottom: 30px;
+}
+
+.upload-field {
+  margin-bottom: 30px;
+}
+
+.upload-field label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.upload-field span {
+  color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.prev-btn,
+.next-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prev-btn {
+  color: #333;
+}
+
+.prev-btn:hover {
+  background-color: #b0b0b0;
+}
+
+.next-btn {
+  background-color: #f75c5c;
+  color: white;
+}
+
+.next-btn:hover {
+  background-color: #e54b4b;
+}

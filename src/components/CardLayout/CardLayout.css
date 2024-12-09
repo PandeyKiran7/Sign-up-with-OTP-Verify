@@ -1,116 +1,83 @@
+
 .card-layout {
-    color: #696969;
-    width: 500px;
-    height: 976px;
-  }
-  
-  .back-arrow {
-    width: 70px;
-    height: 21px; /* Fixed height */
-    margin-top: 30px;
-    top: 48px;
-    left: 56px;
-    gap: 4px;
-    opacity: 1; /* Set opacity to 1 for visibility */
-    display: flex;
-    border: 1px solid #696969;
-    align-items: center;
-  }
-  
-  .back-arrow p {
-    width: 33px;
-    height: 21px;
-    opacity: 1; /* Set opacity to 1 for visibility */
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
-    text-decoration: none; /* Adjusted text decoration */
-  }
-  
-  .card-layout h2 {
-    width: 100%; /* Fixed width to 100% for responsiveness */
-    height: 40px;
-    top: 184px;
-    gap: 0px;
-    opacity: 1; /* Set opacity to 1 for visibility */
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 40px;
-    text-align: center;
-    color: #ffff;
-  }
-  
-  .cards {
-    width: 340px; /* Corrected from Hug to 340px */
-    height: 236px; /* Corrected from Hug to 236px */
-    top: 280px;
-    left: 304px;
-    padding: 24px 28px;
-    gap: 24px;
-    border-radius: 12px 0px 0px 0px;
-    border: 1px solid #696969;
-    background: radial-gradient(
-      97.57% 210.75% at 0.9% 2.98%, rgba(9, 0, 23, 0.4) 0%, rgba(255, 255, 255, 0) 100%
-    );
-    backdrop-filter: blur(42px);
-    opacity: 1; /* Set opacity to 1 for visibility */
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  
-  .card h3 {
-    width: 237px;
-    height: 24px;
-    opacity: 1; /* Set opacity to 1 for visibility */
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
-    color: #fff;
-  }
-  
-  .card p {
-    width: 237px;
-    height: 20px;
-    opacity: 1; /* Set opacity to 1 for visibility */
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
-  }
-  
-  .card-details {
-    width: 284px;
-    height: 62px; /* Corrected from Hug to 62px */
-    gap: 8px;
-    opacity: 1; /* Set opacity to 1 for visibility */
-  }
-  
-  .card-details p {
-    width: 284px;
-    height: 36px;
-    opacity: 1; /* Set opacity to 1 for visibility */
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-  }
-  
-  .card img {
-    width: 40px;
-    height: auto; /* Ensure the image maintains aspect ratio */
-    margin-bottom: 10px;
-    border-radius: 4px;
-  }
-  
+  width: 800px; 
+  height: 850px; 
+background: linear-gradient(90deg, rgb(117, 111, 200) 0%, rgb(25, 34, 37) 35%, rgb(30, 28, 28) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 20px;
+  position: relative;
+  opacity: 99;
+}
+
+.back-arrow {
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  width: 57px;
+  height: 21px;
+  gap: 4px;
+  opacity: 1; 
+  cursor: pointer;
+  display: flex;
+  padding: 15px;
+}
+
+.back-arrow i {
+  margin-right: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.two-card {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  width: 300px;
+  height: 200px; 
+  padding: 24px 28px;
+  border-radius: 12px;
+  background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(9, 0, 23, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid grey;
+  box-shadow: 2px 3px 4px 2px grey;
+  backdrop-filter: blur(42px);
+  color: #F9F9F9;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+}
+
+.card img {
+  width: 50px; 
+  height: 35px; 
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px -8px #641AAD29;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-family: "Inter";
+  font-size: 16px; 
+  font-weight: 600;
+  line-height: 24px;
+  color: #F9F9F9;
+}
+
+.card-details {
+  margin-top: 20px;
+  text-align: center;
+}

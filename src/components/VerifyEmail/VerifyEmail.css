@@ -1,6 +1,4 @@
 .verify-email-container {
-  width: 519px;
-  height: 284px;
   top: 232px;
   left: 1081px;
   gap: 48px;
@@ -12,8 +10,6 @@
   background-color: #f7f7f7;
 }
 .layout {
- width: 1920px;
- height: 976px;
  top: 80px;
  left: 80px;
  background-color: #fff;
@@ -27,6 +23,7 @@
   font-size: 32px;
   line-height: 40px;
   color: #202020;
+  margin-left: 50%;
 }
 .verify-email-container p {
   width: 519px;
@@ -46,7 +43,8 @@
   width: 519px;
   height: 52px;
   display: flex;
-  gap: 8px;
+  margin-left: 30%;
+  gap: 20px;
 }
 
 .otp-input {
@@ -59,27 +57,23 @@
 }
 
 .verify-button {
-  width: 519px;
-  height: 48px;
+  width: 400px;
   border-radius: 10px;
   padding: 14px;
   gap: 10px;
   opacity: 80%;
   padding: 0.5rem 1rem;
-  background-color: #E50000;
+  background-color: #ff0d0d;
   color: #fff;
   cursor: pointer;
   font-size: 1rem;
 }
 
 .resend-container {
-  width: 519px;
-  height: 24px;
   font-family: "Heebo", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #646464;
   margin-top: 1rem;
   text-align: center;
 }
@@ -87,8 +81,7 @@
 
 
 .resend-button {
-  background-color: #28a745;
-  color: #fff;
+  color: #000;
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -96,8 +89,6 @@
 }
 
 .terms-container {
-  width: 519px;
-  height: 42px;
   top: 902px;
   left: 1081px;
   font-family: "Inter", sans-serif;
@@ -106,6 +97,7 @@
   align-items: center;
   font-size: 14px;
   color: #555;
+  margin-top: 18%;
 }
 
 .terms-container span {

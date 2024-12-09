@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Footer from "../Footer/Footer";
 import "./verifyEmail.css";
 
 
@@ -59,7 +58,7 @@ const VerifyEmail = () => {
   if (!email || !otp) {
     return (
       <>
-        <p className="error">Error: Email or OTP missing. Please go back and re-enter.</p>
+        <p className="error">Error: Email or OTP missing. Please go back to signUp.</p>
       </>
     );
   }
@@ -97,7 +96,7 @@ const VerifyEmail = () => {
               </p>
             ) : (
               <button onClick={handleResendOtp} className="resend-button">
-                Didn't receive a code? Resend Code
+                Didn't receive a code? <span style={{color:"blue"}}>Resend Code</span>
               </button>
             )}
           </div>
