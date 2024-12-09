@@ -32,6 +32,10 @@ This will open the application in your default browser at http://localhost:5173
 
 # Live Demo
 You can view the live demo of the project by visiting the following link:
+https://ubiquitous-axolotl-ace5c1.netlify.app/
+# Screenshots
+## Home Page
+
 
 
 
