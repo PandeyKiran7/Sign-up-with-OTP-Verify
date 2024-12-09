@@ -1,11 +1,13 @@
 import React from "react";
 import "./CardLayout.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const CardLayout = () => {
   return (
     <div className="card-layout">
       <div className="back-arrow">
-        <i className="fa-solid fa-arrow-left"></i>
+        <FontAwesomeIcon icon={faArrowLeft} />
         <p>Back</p>
       </div>
       <h2 style={{ color: "white", marginLeft: "35%", padding: "20px" }}>
