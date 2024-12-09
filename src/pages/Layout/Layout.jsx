@@ -2,7 +2,7 @@ import React from 'react';
 import CardLayout from '../../components/CardLayout/CardLayout';
 import VerifyEmail from '../../components/VerifyEmail/VerifyEmail';
 import Navbar from '../../components/Navbar/Navbar';
-import './Layout.css'; 
+import './layout.css'; 
 import Footer from '../../components/Footer/Footer';
 
 const Layout = () => {
